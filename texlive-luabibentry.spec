@@ -1,3 +1,9 @@
+# revision 23435
+# category Package
+# catalog-ctan /macros/luatex/latex/luabibentry
+# catalog-date 2011-06-30 18:17:02 +0200
+# catalog-license lppl1.3
+# catalog-version 0.1
 Name:		texlive-luabibentry
 Version:	0.1
 Release:	1
@@ -44,6 +50,7 @@ The package reimplements bibentry, for use in LuaLaTeX.
 #- source
 %doc %{_texmfdistdir}/source/lualatex/luabibentry/Makefile
 %doc %{_texmfdistdir}/source/lualatex/luabibentry/luabibentry.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ The package reimplements bibentry, for use in LuaLaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
