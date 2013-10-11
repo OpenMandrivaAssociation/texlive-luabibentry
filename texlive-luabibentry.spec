@@ -1,12 +1,12 @@
-# revision 23435
+# revision 31783
 # category Package
 # catalog-ctan /macros/luatex/latex/luabibentry
-# catalog-date 2011-06-30 18:17:02 +0200
+# catalog-date 2013-09-27 07:27:17 +0200
 # catalog-license lppl1.3
-# catalog-version 0.1
+# catalog-version 0.1a
 Name:		texlive-luabibentry
-Version:	0.1
-Release:	2
+Version:	0.1a
+Release:	1
 Summary:	Repeat BibTeX entries in a LuaLaTeX document body
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/luabibentry
@@ -18,8 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-
-%define		_unpackaged_subdirs_terminate_build	0
 
 %description
 The package reimplements bibentry, for use in LuaLaTeX.
@@ -52,17 +50,3 @@ The package reimplements bibentry, for use in LuaLaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
-+ Revision: 754350
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
-+ Revision: 718919
-- texlive-luabibentry
-- texlive-luabibentry
-- texlive-luabibentry
-- texlive-luabibentry
-
