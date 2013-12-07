@@ -6,7 +6,7 @@
 # catalog-version 0.1a
 Name:		texlive-luabibentry
 Version:	0.1a
-Release:	4
+Release:	5
 Summary:	Repeat BibTeX entries in a LuaLaTeX document body
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/luabibentry
