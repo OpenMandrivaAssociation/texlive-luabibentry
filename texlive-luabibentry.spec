@@ -1,19 +1,13 @@
-# revision 31783
-# category Package
-# catalog-ctan /macros/luatex/latex/luabibentry
-# catalog-date 2013-09-27 07:27:17 +0200
-# catalog-license lppl1.3
-# catalog-version 0.1a
 Name:		texlive-luabibentry
-Version:	0.1a
-Release:	10
+Version:	55777
+Release:	1
 Summary:	Repeat BibTeX entries in a LuaLaTeX document body
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/latex/luabibentry
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabibentry.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabibentry.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabibentry.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabibentry.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabibentry.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luabibentry.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ Requires(post):	texlive-kpathsea
 The package reimplements bibentry, for use in LuaLaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,7 +37,8 @@ The package reimplements bibentry, for use in LuaLaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
